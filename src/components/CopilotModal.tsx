@@ -181,14 +181,14 @@ export const CopilotModal = forwardRef<CopilotModalHandle, Props>(
           tooltip.right =
             tooltip.right === 0 ? tooltip.right + margin : tooltip.right;
           tooltip.maxWidth = newMeasuredLayout.width - tooltip.right - margin;
-          arrow.right = tooltip.right + margin;
         } else {
           tooltip.left = Math.max(rect.x, 0);
           tooltip.left =
             tooltip.left === 0 ? tooltip.left + margin : tooltip.left;
           tooltip.maxWidth = newMeasuredLayout.width - tooltip.left - margin;
-          arrow.left = tooltip.left + margin;
         }
+
+        arrow.center.x = center.x;
 
         sanitize(arrow);
         sanitize(tooltip);
