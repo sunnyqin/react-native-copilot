@@ -188,7 +188,7 @@ export const CopilotModal = forwardRef<CopilotModalHandle, Props>(
           tooltip.maxWidth = newMeasuredLayout.width - tooltip.left - margin;
         }
 
-        arrow.center.x = center.x;
+        arrow.left = relativeToLeft - arrowSize;
 
         sanitize(arrow);
         sanitize(tooltip);

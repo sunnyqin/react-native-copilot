@@ -590,7 +590,7 @@ var CopilotModal = (0, import_react5.forwardRef)(
           tooltip.left = tooltip.left === 0 ? tooltip.left + margin : tooltip.left;
           tooltip.maxWidth = newMeasuredLayout.width - tooltip.left - margin;
         }
-        arrow.center.x = center.x;
+        arrow.left = relativeToLeft - arrowSize;
         sanitize(arrow);
         sanitize(tooltip);
         sanitize(rect);
